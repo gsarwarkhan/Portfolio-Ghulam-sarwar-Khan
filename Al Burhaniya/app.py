@@ -5,9 +5,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import hashlib
 from PIL import Image
+import os
 
-# Database setup
-conn = sqlite3.connect("spiritual_tracker.db", check_same_thread=False)
+# Get the current directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Database setup with absolute path
+db_path = os.path.join(current_dir, "spiritual_tracker.db")
+conn = sqlite3.connect(db_path, check_same_thread=False)
 cursor = conn.cursor()
 
 # Create users table
@@ -84,8 +89,9 @@ def hash_password(password):
 def verify_password(password, hashed_password):
     return hash_password(password) == hashed_password
 
-# Load and display logo
-logo = Image.open('logo.png')
+# Load and display logo with absolute path
+logo_path = os.path.join(current_dir, "logo.png")
+logo = Image.open(logo_path)
 st.image(logo, width=200)
 
 # Sidebar login/signup
