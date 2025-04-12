@@ -85,7 +85,7 @@ def verify_password(password, hashed_password):
     return hash_password(password) == hashed_password
 
 # Load and display logo
-logo = Image.open('Al Burhaniya/logo.png')
+logo = Image.open('logo.png')
 st.image(logo, width=200)
 
 # Sidebar login/signup
