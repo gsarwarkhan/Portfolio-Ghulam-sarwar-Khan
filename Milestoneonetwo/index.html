@@ -29,9 +29,17 @@
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -53,15 +61,26 @@
     </script>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="tech-background">
-        <div class="tech-grid"></div>
+    <!-- Crown Chakra Animated Background -->
+    <div class="crown-chakra-bg">
+        <div class="chakra-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+        </div>
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
     </div>
     
     <!-- Floating Hire Me Button -->
-    <div class="floating-hire-btn">
+    <div class="floating-hire-btn" data-aos="fade-in" data-aos-delay="1000">
         <a href="#contact" class="hire-btn">
-            <i class="fas fa-briefcase"></i>
+            <i class="fas fa-crown"></i>
             <span>Hire Me</span>
         </a>
     </div>
@@ -69,7 +88,10 @@
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <a href="#" class="logo" aria-label="Home">Ghulam Sarwar Khan</a>
+            <a href="#" class="logo" aria-label="Home">
+                <i class="fas fa-crown"></i>
+                Ghulam Sarwar Khan
+            </a>
             <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -89,35 +111,49 @@
     <!-- Hero Section -->
     <section id="home" class="hero" role="banner">
         <div class="hero-content">
-            <img src="./Profile pic.jpg" alt="Ghulam Sarwar Khan - Senior Executive Secretary and AI Developer" class="profile-image">
-            <h1>GHULAM SARWAR KHAN</h1>
-            <h2>Senior Executive Secretary & AI Developer</h2>
-            <p class="hero-subtitle">Bridging Business Administration with Emerging Technologies</p>
-            <div class="hero-badges">
+            <div class="profile-container" data-aos="zoom-in" data-aos-delay="300">
+                <img src="./Profile pic.jpg" alt="Ghulam Sarwar Khan - Senior Executive Secretary and AI Developer" class="profile-image">
+                <div class="profile-glow"></div>
+            </div>
+            
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="500">
+                <h1>GHULAM SARWAR KHAN</h1>
+                <h2>Senior Executive Secretary & AI Developer</h2>
+                <p class="hero-tagline">"Bridging Ancient Wisdom with Modern Technology"</p>
+                <p class="hero-subtitle">Transforming Business Administration through AI Innovation & Crown Chakra Leadership</p>
+            </div>
+            
+            <div class="hero-badges" data-aos="fade-up" data-aos-delay="700">
                 <span class="badge executive-badge">
-                    <i class="fas fa-user-tie"></i>
-                    Executive Secretary
+                    <i class="fas fa-crown"></i>
+                    Executive Leadership
                 </span>
                 <span class="badge ai-badge">
-                    <i class="fas fa-robot"></i>
-                    AI Developer
+                    <i class="fas fa-brain"></i>
+                    AI Innovation
                 </span>
                 <span class="badge fullstack-badge">
                     <i class="fas fa-code"></i>
-                    Full Stack Developer
+                    Full Stack Mastery
                 </span>
             </div>
-            <div class="hero-cta">
+            
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="900">
                 <a href="https://ai-agent-appgit-6rivk5mxhzbkanszvdshte.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fas fa-robot"></i>
-                    Try My AI Agent
+                    Experience My AI Agent
                 </a>
-                <a href="#projects" class="btn btn-secondary">
+                <a href="./Resume GSK.pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+                <a href="#projects" class="btn btn-outline">
                     <i class="fas fa-eye"></i>
                     View Projects
                 </a>
             </div>
-            <div class="social-links">
+            
+            <div class="social-links" data-aos="fade-up" data-aos-delay="1100">
                 <a href="mailto:sarwaronline@gmail.com?subject=Portfolio Inquiry&body=Hello Ghulam Sarwar Khan,%0D%0A%0D%0AI'm interested in your services as a Senior Executive Secretary & AI Developer.%0D%0A%0D%0APlease provide me with more information about your availability and services.%0D%0A%0D%0ABest regards," class="btn btn-outline" aria-label="Send email">
                     <i class="fas fa-envelope"></i> Email Me
                 </a>
@@ -125,8 +161,9 @@
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
-            <div class="social-connect">
-                <h4>Connect With Me</h4>
+            
+            <div class="social-connect" data-aos="fade-up" data-aos-delay="1300">
+                <h4>Connect With My Energy</h4>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/ghulam-sarwar-khan-b989b48a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
@@ -148,16 +185,18 @@
     <!-- About Section -->
     <section id="about" class="about" role="region" aria-labelledby="about-title">
         <div class="container">
-            <h2 id="about-title" class="section-title">About Me</h2>
+            <h2 id="about-title" class="section-title" data-aos="fade-up">About My Journey</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Professional Summary</h3>
-                    <p>I am a Senior Executive Secretary with over 8 years of experience in business administration, corporate management, and stakeholder relations. Currently serving at the Karachi Chamber of Commerce and Industry (KCCI), I have successfully transitioned into the technology sector, specializing in AI development and full-stack web development. My unique combination of executive-level business acumen and technical expertise enables me to bridge the gap between traditional business operations and cutting-edge technology solutions.</p>
+                <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                    <h3>From Trade Sector to AI Innovation</h3>
+                    <p>My journey began in the dynamic world of trade and commerce, where I served as a Senior Executive Secretary at the Karachi Chamber of Commerce and Industry (KCCI). Over 8 years of experience in business administration, corporate management, and stakeholder relations have given me a unique perspective on how traditional business operations can be enhanced through technology.</p>
                     
-                    <p>I am currently advancing my skills in Generative AI and modern web technologies through the prestigious Governor House Artificial Intelligence Program, positioning myself as a valuable asset for organizations seeking professionals who understand both business operations and emerging technologies.</p>
+                    <p>Today, I'm passionately transitioning into the AI and technology sector, combining my executive-level business acumen with cutting-edge technical skills. My participation in the prestigious Governor House Artificial Intelligence Program reflects my commitment to staying at the forefront of emerging technologies while maintaining the wisdom and leadership qualities that define successful business operations.</p>
+                    
+                    <p>I believe in the power of the crown chakra - the center of spiritual connection and higher consciousness. This philosophy guides my approach to both business and technology, ensuring that every solution I create serves not just functional needs, but also elevates human potential and organizational growth.</p>
                     
                     <div class="tech-stack">
-                        <h4>Technical Expertise</h4>
+                        <h4>Technical Mastery</h4>
                         <div class="tech-icons">
                             <div class="tech-icon" title="React & Next.js">
                                 <i class="fab fa-react"></i>
@@ -182,8 +221,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="certifications">
-                    <h3>Education & Certifications</h3>
+                
+                <div class="certifications" data-aos="fade-left" data-aos-delay="400">
+                    <h3>Education & Spiritual Growth</h3>
                     <div class="cert-item">
                         <div class="cert-icon">
                             <i class="fas fa-graduation-cap"></i>
@@ -195,7 +235,7 @@
                     </div>
                     <div class="cert-item">
                         <div class="cert-icon">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-brain"></i>
                         </div>
                         <div class="cert-content">
                             <h4>Artificial Intelligence, Web 3.0 & Metaverse</h4>
@@ -219,10 +259,10 @@
     <!-- Projects Section -->
     <section id="projects" class="projects" role="region" aria-labelledby="projects-title">
         <div class="container">
-            <h2 id="projects-title" class="section-title">Featured Projects</h2>
+            <h2 id="projects-title" class="section-title" data-aos="fade-up">Featured Projects</h2>
             
             <!-- Featured AI Agent Project -->
-            <div class="featured-project">
+            <div class="featured-project" data-aos="zoom-in" data-aos-delay="200">
                 <div class="project-header">
                     <div class="project-icon">
                         <i class="fas fa-robot"></i>
@@ -241,33 +281,67 @@
                     <div class="project-links">
                         <a href="https://ai-agent-appgit-6rivk5mxhzbkanszvdshte.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                             <i class="fas fa-external-link-alt"></i>
-                            Try My AI Agent
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/gsarwarkhan" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fab fa-github"></i>
+                            GitHub
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- Project Descriptions -->
-            <div class="project-descriptions">
-                <div class="project-description">
-                    <h3><i class="fas fa-database"></i> Business Intelligence Dashboard</h3>
-                    <p>A comprehensive business intelligence solution that integrates data from multiple sources to provide actionable insights for executive decision-making. This project combines my business analysis skills with technical implementation, featuring real-time data visualization, interactive dashboards, and automated reporting systems. Built with React and TypeScript, it demonstrates my ability to bridge business requirements with technical solutions.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Data Visualization</span>
-                        <span class="tech-tag">API Integration</span>
+            <!-- Project Cards Grid -->
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Business Intelligence Dashboard</h3>
+                        <p>A comprehensive business intelligence solution that integrates data from multiple sources to provide actionable insights for executive decision-making. Features real-time data visualization, interactive dashboards, and automated reporting systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Data Visualization</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/gsarwarkhan" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="project-description">
-                    <h3><i class="fas fa-cogs"></i> Process Automation System</h3>
-                    <p>An automated workflow management system designed to streamline administrative processes and improve operational efficiency. This project leverages AI to optimize business processes and reduce manual workload. It includes intelligent document processing, automated task assignment, and performance analytics. The system demonstrates my expertise in process optimization and AI integration for business applications.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Automation</span>
-                        <span class="tech-tag">Workflow</span>
-                        <span class="tech-tag">AI Integration</span>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Process Automation System</h3>
+                        <p>An automated workflow management system designed to streamline administrative processes and improve operational efficiency. Leverages AI to optimize business processes and reduce manual workload.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Workflow</span>
+                            <span class="tech-tag">AI Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/gsarwarkhan" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -277,10 +351,10 @@
     <!-- Experience Section -->
     <section id="experience" class="experience" role="region" aria-labelledby="experience-title">
         <div class="container">
-            <h2 id="experience-title" class="section-title">Professional Experience</h2>
+            <h2 id="experience-title" class="section-title" data-aos="fade-up">Professional Journey</h2>
             <div class="timeline-container">
                 <div class="timeline-wrapper">
-                    <div class="timeline-block" data-aos="fade-up">
+                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="200">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">July 2022 - Present</span>
@@ -298,7 +372,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="400">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2020 - 2022</span>
@@ -316,7 +390,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="600">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2018 - 2020</span>
@@ -334,7 +408,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="600">
+                    <div class="timeline-block" data-aos="fade-up" data-aos-delay="800">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2016 - 2018</span>
@@ -359,9 +433,9 @@
     <!-- Skills Section -->
     <section id="skills" class="skills" role="region" aria-labelledby="skills-title">
         <div class="container">
-            <h2 id="skills-title" class="section-title">Skills & Expertise</h2>
+            <h2 id="skills-title" class="section-title" data-aos="fade-up">Skills & Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-right" data-aos-delay="200">
                     <h3>Technical Skills</h3>
                     <div class="skill-item">
                         <span>React/Next.js</span>
@@ -394,7 +468,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-left" data-aos-delay="400">
                     <h3>Professional Skills</h3>
                     <div class="skill-item">
                         <span>Executive Administration</span>
@@ -434,9 +508,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
         <div class="container">
-            <h2 id="contact-title" class="section-title">Get In Touch</h2>
+            <h2 id="contact-title" class="section-title" data-aos="fade-up">Connect With My Energy</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
                     <div class="contact-item">
                         <i class="fas fa-phone" aria-hidden="true"></i>
                         <div>
@@ -460,7 +534,7 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" action="#" method="POST" role="form">
+                <form class="contact-form" action="https://formspree.io/f/xpzgwqjq" method="POST" role="form" data-aos="fade-left" data-aos-delay="400">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required aria-required="true">
@@ -484,8 +558,8 @@
                 </form>
             </div>
             
-            <div class="social-links-section">
-                <h3>Connect With Me</h3>
+            <div class="social-links-section" data-aos="fade-up" data-aos-delay="600">
+                <h3>Connect With My Energy</h3>
                 <div class="social-grid">
                     <a href="https://www.linkedin.com/in/ghulam-sarwar-khan-b989b48a/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
                         <i class="fab fa-linkedin"></i>
@@ -513,8 +587,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Ghulam Sarwar Khan</h3>
-                    <p>Senior Executive Secretary & AI Developer passionate about bridging business operations with emerging technologies.</p>
+                    <h3><i class="fas fa-crown"></i> Ghulam Sarwar Khan</h3>
+                    <p>Senior Executive Secretary & AI Developer passionate about bridging business operations with emerging technologies through crown chakra wisdom.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -548,12 +622,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Ghulam Sarwar Khan. All rights reserved.</p>
+                <p>&copy; 2025 Ghulam Sarwar Khan. All rights reserved. | Powered by Crown Chakra Energy</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
