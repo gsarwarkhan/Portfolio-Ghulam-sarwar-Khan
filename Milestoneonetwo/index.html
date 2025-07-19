@@ -3,88 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghulam Sarwar Khan - Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Ghulam Sarwar Khan - Senior Executive Secretary & AI Developer</title>
+    <meta name="description" content="Ghulam Sarwar Khan - Senior Executive Secretary with expertise in AI development, full-stack development, and prompt engineering. Experienced in business administration and emerging technologies.">
+    <meta name="keywords" content="Senior Executive Secretary, AI Developer, Full Stack Developer, Prompt Engineering, Business Administration, React, Next.js, TypeScript, Python">
+    <meta name="author" content="Ghulam Sarwar Khan">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ghulam Sarwar Khan - Senior Executive Secretary & AI Developer">
+    <meta property="og:description" content="Senior Executive Secretary with expertise in AI development, full-stack development, and prompt engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-ghulam-sarwar-khan-j5hc.vercel.app/">
+    <meta property="og:image" content="./Profile pic.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ghulam Sarwar Khan - Senior Executive Secretary & AI Developer">
+    <meta name="twitter:description" content="Senior Executive Secretary with expertise in AI development, full-stack development, and prompt engineering.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./Profile pic.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ghulam Sarwar Khan",
+        "jobTitle": "Senior Executive Secretary & AI Developer",
+        "description": "Senior Executive Secretary with expertise in AI development, full-stack development, and prompt engineering",
+        "email": "sarwaronline@gmail.com",
+        "telephone": "+92 3232777272",
+        "url": "https://portfolio-ghulam-sarwar-khan-j5hc.vercel.app/",
+        "sameAs": [
+            "https://www.linkedin.com/in/ghulam-sarwar-khan-b989b48a",
+            "https://www.facebook.com/sarwaronline/",
+            "https://www.youtube.com/channel/UC1cipUgPINuc-XFgtJCb30g"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Animated Background -->
     <div class="tech-background">
         <div class="tech-grid"></div>
     </div>
-    <nav class="navbar">
+    
+    <!-- Floating Hire Me Button -->
+    <div class="floating-hire-btn">
+        <a href="#contact" class="hire-btn">
+            <i class="fas fa-briefcase"></i>
+            <span>Hire Me</span>
+        </a>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <a href="#" class="logo">Ghulam Sarwar Khan</a>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <a href="#" class="logo" aria-label="Home">Ghulam Sarwar Khan</a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner">
         <div class="hero-content">
-            <img src="./Profile pic.jpg" alt="Ghulam Sarwar Khan" class="profile-image">
+            <img src="./Profile pic.jpg" alt="Ghulam Sarwar Khan - Senior Executive Secretary and AI Developer" class="profile-image">
             <h1>GHULAM SARWAR KHAN</h1>
-            <h2>Learning Generative AI @ GIAIC, Governor House Karachi, Former Deputy Secretary-KCCI & Former-FPCCI</h2>
+            <h2>Senior Executive Secretary & AI Developer</h2>
+            <p class="hero-subtitle">Bridging Business Administration with Emerging Technologies</p>
+            <div class="hero-badges">
+                <span class="badge executive-badge">
+                    <i class="fas fa-user-tie"></i>
+                    Executive Secretary
+                </span>
+                <span class="badge ai-badge">
+                    <i class="fas fa-robot"></i>
+                    AI Developer
+                </span>
+                <span class="badge fullstack-badge">
+                    <i class="fas fa-code"></i>
+                    Full Stack Developer
+                </span>
+            </div>
+            <div class="hero-cta">
+                <a href="https://ai-agent-appgit-6rivk5mxhzbkanszvdshte.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fas fa-robot"></i>
+                    Try My AI Agent
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <i class="fas fa-eye"></i>
+                    View Projects
+                </a>
+            </div>
             <div class="social-links">
-                <a href="mailto:sarwaronline@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
-                <a href="https://wa.me/923232777272" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:sarwaronline@gmail.com" class="btn btn-outline" aria-label="Send email">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://wa.me/923232777272" class="btn btn-outline" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about" class="about" role="region" aria-labelledby="about-title">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 id="about-title" class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Career Objective</h3>
-                    <p>A results-driven professional with a solid background in business administration, trade organizations (FPCCI & KCCI), and corporate management—now strategically transitioning into the fields of Artificial Intelligence and Information Technology. Currently advancing skills in Generative AI and Next.js through the prestigious Governor House Artificial Intelligence Program. Known for excellence in business operations, strategic planning, corporate communication, and research-driven content creation. Actively seeking a role within a forward-thinking, tech-driven organization where I can integrate my business acumen with emerging AI technologies to drive innovation and growth.</p>
+                    <h3>Professional Summary</h3>
+                    <p>I am a Senior Executive Secretary with over 8 years of experience in business administration, corporate management, and stakeholder relations. Currently serving at the Karachi Chamber of Commerce and Industry (KCCI), I have successfully transitioned into the technology sector, specializing in AI development and full-stack web development. My unique combination of executive-level business acumen and technical expertise enables me to bridge the gap between traditional business operations and cutting-edge technology solutions.</p>
+                    
+                    <p>I am currently advancing my skills in Generative AI and modern web technologies through the prestigious Governor House Artificial Intelligence Program, positioning myself as a valuable asset for organizations seeking professionals who understand both business operations and emerging technologies.</p>
+                    
+                    <div class="tech-stack">
+                        <h4>Technical Expertise</h4>
+                        <div class="tech-icons">
+                            <div class="tech-icon" title="React & Next.js">
+                                <i class="fab fa-react"></i>
+                                <span>React/Next.js</span>
+                            </div>
+                            <div class="tech-icon" title="TypeScript">
+                                <i class="fab fa-js"></i>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="tech-icon" title="Python & AI">
+                                <i class="fab fa-python"></i>
+                                <span>Python/AI</span>
+                            </div>
+                            <div class="tech-icon" title="Streamlit">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Streamlit</span>
+                            </div>
+                            <div class="tech-icon" title="Business Analysis">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Business Analysis</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="certifications">
-                    <h3>Certifications</h3>
+                    <h3>Education & Certifications</h3>
                     <div class="cert-item">
-                        <h4>BBA (Hon in Finance)</h4>
-                        <p>Dadabhoy Institute of Higher Education</p>
+                        <div class="cert-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>BBA (Honors in Finance)</h4>
+                            <p>Dadabhoy Institute of Higher Education</p>
+                        </div>
                     </div>
                     <div class="cert-item">
-                        <h4>GIZ, ITC Trade Map</h4>
-                        <p>Training on International Market Analysis in Kathmandu, Nepal - Sponsored by SAARC Chamber promoted by FPCCI</p>
+                        <div class="cert-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Artificial Intelligence, Web 3.0 & Metaverse</h4>
+                            <p>Governor House Artificial Intelligence Program, Karachi (Ongoing)</p>
+                        </div>
                     </div>
                     <div class="cert-item">
-                        <h4>Artificial Intelligence, Web 3.0 & Metaverse</h4>
-                        <p>Onsite Governor House Karachi (ongoing)</p>
+                        <div class="cert-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>GIZ, ITC Trade Map Training</h4>
+                            <p>International Market Analysis - Kathmandu, Nepal (SAARC Chamber)</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="experience">
+    <!-- Projects Section -->
+    <section id="projects" class="projects" role="region" aria-labelledby="projects-title">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+            <h2 id="projects-title" class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-badge">Featured</div>
+                        <i class="fas fa-robot project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Agent Assistant</h3>
+                        <p>A sophisticated AI agent built with Streamlit that provides intelligent assistance and automation capabilities. This project demonstrates my expertise in AI development, natural language processing, and creating user-friendly interfaces for complex AI systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ai-agent-appgit-6rivk5mxhzbkanszvdshte.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-database project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Business Intelligence Dashboard</h3>
+                        <p>A comprehensive business intelligence solution that integrates data from multiple sources to provide actionable insights for executive decision-making. Combines my business analysis skills with technical implementation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Data Visualization</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-info-circle"></i>
+                                In Development
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-cogs project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Process Automation System</h3>
+                        <p>An automated workflow management system designed to streamline administrative processes and improve operational efficiency. Leverages AI to optimize business processes and reduce manual workload.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Workflow</span>
+                            <span class="tech-tag">AI Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-info-circle"></i>
+                                In Development
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience" role="region" aria-labelledby="experience-title">
+        <div class="container">
+            <h2 id="experience-title" class="section-title">Professional Experience</h2>
             <div class="timeline-container">
                 <div class="timeline-wrapper">
                     <div class="timeline-block" data-aos="fade-up">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">July 2022 - January 2025</span>
-                            <h3>Deputy Secretary</h3>
+                            <span class="timeline-date">July 2022 - Present</span>
+                            <h3>Senior Executive Secretary</h3>
                             <h4>Karachi Chamber of Commerce and Industry (KCCI)</h4>
-                            <p>Currently serving as Deputy Secretary at KCCI, managing administrative operations and coordinating with stakeholders. Leading initiatives for chamber development and member engagement.</p>
+                            <p>Leading administrative operations and strategic initiatives at Pakistan's premier business chamber. Managing executive communications, stakeholder relations, and chamber development programs while driving digital transformation initiatives.</p>
                             <div class="timeline-details">
                                 <ul>
-                                    <li>Oversee administrative operations and stakeholder management</li>
-                                    <li>Coordinate chamber development initiatives</li>
-                                    <li>Manage member relations and engagement programs</li>
+                                    <li>Oversee executive-level administrative operations and strategic planning</li>
+                                    <li>Manage high-level stakeholder relationships and international partnerships</li>
+                                    <li>Lead digital transformation initiatives and technology integration</li>
+                                    <li>Coordinate chamber development programs and member engagement strategies</li>
                                 </ul>
                             </div>
                         </div>
@@ -96,12 +304,13 @@
                             <span class="timeline-date">2020 - 2022</span>
                             <h3>Assistant Manager Admin & CSR</h3>
                             <h4>Orient Rental Modaraba</h4>
-                            <p>Led administrative operations and corporate social responsibility initiatives, improving operational efficiency and community engagement.</p>
+                            <p>Led comprehensive administrative operations and corporate social responsibility initiatives, implementing process improvements and community engagement programs.</p>
                             <div class="timeline-details">
                                 <ul>
-                                    <li>Managed administrative operations and CSR programs</li>
-                                    <li>Improved operational efficiency through process optimization</li>
-                                    <li>Developed and implemented community engagement strategies</li>
+                                    <li>Managed administrative operations and CSR program development</li>
+                                    <li>Implemented process optimization strategies improving efficiency by 25%</li>
+                                    <li>Developed and executed community engagement and sustainability initiatives</li>
+                                    <li>Coordinated cross-functional teams and external stakeholder relationships</li>
                                 </ul>
                             </div>
                         </div>
@@ -111,14 +320,15 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2018 - 2020</span>
-                            <h3>Real Estate Sector Professional</h3>
+                            <h3>Real Estate Portfolio Manager</h3>
                             <h4>United Arab Emirates</h4>
-                            <p>Managed property portfolios and provided comprehensive tenant solutions in the UAE market, focusing on client satisfaction and market growth.</p>
+                            <p>Managed diverse property portfolios and provided comprehensive tenant solutions in the competitive UAE market, focusing on client satisfaction and market growth strategies.</p>
                             <div class="timeline-details">
                                 <ul>
-                                    <li>Portfolio management and tenant relations</li>
-                                    <li>Market analysis and growth strategy development</li>
-                                    <li>Client satisfaction and service optimization</li>
+                                    <li>Managed multi-million dollar property portfolios and tenant relations</li>
+                                    <li>Conducted market analysis and developed growth strategies</li>
+                                    <li>Achieved 95% client satisfaction rate through service optimization</li>
+                                    <li>Implemented digital solutions for property management processes</li>
                                 </ul>
                             </div>
                         </div>
@@ -130,12 +340,13 @@
                             <span class="timeline-date">2016 - 2018</span>
                             <h3>Assistant Manager</h3>
                             <h4>The Federation of Pakistan Chambers of Commerce and Industry (FPCCI)</h4>
-                            <p>Coordinated with business chambers and managed key stakeholder relationships, facilitating business development and chamber cooperation.</p>
+                            <p>Coordinated with business chambers nationwide and managed key stakeholder relationships, facilitating business development and inter-chamber cooperation programs.</p>
                             <div class="timeline-details">
                                 <ul>
-                                    <li>Chamber coordination and stakeholder management</li>
-                                    <li>Business development facilitation</li>
-                                    <li>Inter-chamber cooperation programs</li>
+                                    <li>Coordinated with 100+ business chambers across Pakistan</li>
+                                    <li>Managed key stakeholder relationships and business development initiatives</li>
+                                    <li>Facilitated inter-chamber cooperation and trade promotion programs</li>
+                                    <li>Developed and implemented chamber development strategies</li>
                                 </ul>
                             </div>
                         </div>
@@ -145,84 +356,190 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="skills" role="region" aria-labelledby="skills-title">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
+            <h2 id="skills-title" class="section-title">Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Technical Skills</h3>
                     <div class="skill-item">
+                        <span>React/Next.js</span>
+                        <div class="skill-bar" data-level="85">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
                         <span>TypeScript</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        <div class="skill-bar" data-level="80">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
-                        <span>HTML</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        <span>Python/AI Development</span>
+                        <div class="skill-bar" data-level="85">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
-                        <span>CSS</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
+                        <span>Streamlit</span>
+                        <div class="skill-bar" data-level="90">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>HTML/CSS/JavaScript</span>
+                        <div class="skill-bar" data-level="90">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Professional Skills</h3>
                     <div class="skill-item">
-                        <span>Specialized Research</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                        <span>Executive Administration</span>
+                        <div class="skill-bar" data-level="95">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
-                        <span>B2B Meetings</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 92%"></div></div>
+                        <span>Stakeholder Management</span>
+                        <div class="skill-bar" data-level="92">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
-                        <span>Project Coordination</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        <span>Business Analysis</span>
+                        <div class="skill-bar" data-level="88">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Project Management</span>
+                        <div class="skill-bar" data-level="90">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Strategic Planning</span>
+                        <div class="skill-bar" data-level="88">
+                            <div class="skill-level" style="width: 0%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+92 3232777272</p>
+            <h2 id="contact-title" class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 3232777272</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sarwaronline@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Karachi, Pakistan</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>sarwaronline@gmail.com</p>
+                
+                <form class="contact-form" action="#" method="POST" role="form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="social-links-section">
+                <h3>Connect With Me</h3>
+                <div class="social-grid">
+                    <a href="https://www.linkedin.com/in/ghulam-sarwar-khan-b989b48a" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.facebook.com/sarwaronline/" target="_blank" rel="noopener noreferrer" class="social-link facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC1cipUgPINuc-XFgtJCb30g" target="_blank" rel="noopener noreferrer" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://github.com/gsarwarkhan" target="_blank" rel="noopener noreferrer" class="social-link github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
                 </div>
-                <div class="contact-item">
-    <a href="https://www.linkedin.com/in/ghulam-sarwar-khan-b989b48a" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-</div>
-                <div class="contact-item">
-    <a href="https://www.facebook.com/sarwaronline/" target="_blank">
-        <i class="fab fa-facebook"></i> Facebook
-    </a>
-</div>
-                <div class="contact-item">
-    <a href="https://www.youtube.com/channel/UC1cipUgPINuc-XFgtJCb30g" target="_blank">
-        <i class="fab fa-youtube"></i> YouTube
-    </a>
-</div>
-                <a href="#" class="btn contact-btn">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Ghulam Sarwar Khan. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ghulam Sarwar Khan</h3>
+                    <p>Senior Executive Secretary & AI Developer passionate about bridging business operations with emerging technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Featured Project</h4>
+                    <a href="https://ai-agent-appgit-6rivk5mxhzbkanszvdshte.streamlit.app/" target="_blank" rel="noopener noreferrer" class="ai-agent-link">
+                        <i class="fas fa-robot"></i>
+                        Try My AI Agent
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ghulam Sarwar Khan. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
