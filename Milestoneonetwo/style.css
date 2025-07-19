@@ -341,10 +341,8 @@ p {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: var(--spacing-md);
-    background: linear-gradient(135deg, var(--primary-purple), var(--accent-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #1e3a8a; /* Navy blue color */
+    text-shadow: 2px 2px 4px rgba(30, 58, 138, 0.1);
 }
 
 .hero h2 {
@@ -484,6 +482,70 @@ p {
     justify-content: center;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Social Connect Section */
+.social-connect {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.social-connect h4 {
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.125rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-full);
+    background: var(--white);
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-soft);
+    border: 2px solid var(--gray-200);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-purple);
+}
+
+.social-icons a i {
+    font-size: 1.25rem;
+}
+
+.social-icons a:hover i {
+    color: var(--primary-purple);
+}
+
+.social-icons .fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.social-icons .fa-facebook:hover {
+    color: #1877f2;
+}
+
+.social-icons .fa-youtube:hover {
+    color: #ff0000;
+}
+
+.social-icons .fa-github:hover {
+    color: var(--gray-900);
 }
 
 /* Section Styles */
@@ -629,10 +691,105 @@ section {
     background: var(--gray-50);
 }
 
-.projects-grid {
+/* Featured Project */
+.featured-project {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.project-badge {
+    background: var(--accent-gold);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.featured-project .project-content h3 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.featured-project .project-content p {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+
+/* Project Descriptions */
+.project-descriptions {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-xl);
+}
+
+.project-description {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--primary-purple);
+    transition: all var(--transition-normal);
+}
+
+.project-description:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.project-description h3 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.project-description h3 i {
+    color: var(--primary-purple);
+    font-size: 1.25rem;
+}
+
+.project-description p {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
 }
 
 .project-card {
@@ -1274,6 +1431,23 @@ footer {
     .hero-cta {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .social-icons {
+        gap: var(--spacing-md);
+    }
+    
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .featured-project {
+        padding: var(--spacing-lg);
+    }
+    
+    .project-description {
+        padding: var(--spacing-lg);
     }
     
     /* Mobile Sections */
