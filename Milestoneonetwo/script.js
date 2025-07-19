@@ -156,14 +156,56 @@ function initializeContactForm() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual form handling)
+        // Create WhatsApp message
+        const message = `Hello Ghulam Sarwar Khan,
+
+I'm interested in your services. Here are my details:
+
+Name: ${data.name}
+Email: ${data.email}
+Subject: ${data.subject}
+Message: ${data.message}
+
+Please get back to me soon.
+
+Best regards,
+${data.name}`;
+        
+        // Encode message for WhatsApp
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/923232777272?text=${encodedMessage}`;
+        
+        // Open WhatsApp with pre-filled message
         setTimeout(() => {
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+            window.open(whatsappUrl, '_blank');
+            showNotification('Opening WhatsApp with your message!', 'success');
             this.reset();
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        }, 1000);
     });
+    
+    // Handle "Hire Me" button click
+    const hireMeBtn = document.querySelector('.hire-btn');
+    if (hireMeBtn) {
+        hireMeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const message = `Hello Ghulam Sarwar Khan,
+
+I'm interested in hiring you for your services as a Senior Executive Secretary & AI Developer.
+
+Please provide me with more information about your availability and rates.
+
+Best regards`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/923232777272?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+            showNotification('Opening WhatsApp to discuss hiring!', 'success');
+        });
+    }
 }
 
 // Form Validation

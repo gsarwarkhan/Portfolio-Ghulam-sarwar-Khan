@@ -1123,6 +1123,26 @@ footer {
     transform: translateX(5px);
 }
 
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-social-links a {
+    color: var(--gray-400);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.footer-social-links a:hover {
+    color: var(--primary-purple-light);
+    transform: translateX(5px);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-lg);
