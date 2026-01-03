@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -50,10 +50,10 @@ window.addEventListener('scroll', () => {
 menuToggle.addEventListener('click', () => {
     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
     menuToggle.setAttribute('aria-expanded', !isExpanded);
-    
+
     navLinksContainer.classList.toggle('active');
     document.body.classList.toggle('menu-open');
-    
+
     // Animate hamburger icon
     const spans = menuToggle.querySelectorAll('span');
     spans.forEach((span, index) => {
@@ -74,7 +74,7 @@ navLinks.forEach(link => {
         navLinksContainer.classList.remove('active');
         document.body.classList.remove('menu-open');
         menuToggle.setAttribute('aria-expanded', 'false');
-        
+
         // Reset hamburger icon
         const spans = menuToggle.querySelectorAll('span');
         spans.forEach(span => {
@@ -91,7 +91,7 @@ const animateSkillBars = () => {
     skillBars.forEach(bar => {
         const level = bar.getAttribute('data-level');
         const skillLevel = bar.querySelector('.skill-level');
-        
+
         if (skillLevel) {
             skillLevel.style.width = `${level}%`;
         }
@@ -121,14 +121,14 @@ const submitButton = contactForm?.querySelector('button[type="submit"]');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         // Show loading state
         if (submitButton) {
             const originalText = submitButton.innerHTML;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
         }
-        
+
         try {
             const formData = new FormData(contactForm);
             const response = await fetch(contactForm.action, {
@@ -138,7 +138,7 @@ if (contactForm) {
                     'Accept': 'application/json'
                 }
             });
-            
+
             if (response.ok) {
                 showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
                 contactForm.reset();
@@ -163,7 +163,7 @@ function showNotification(message, type = 'info') {
     // Remove existing notifications
     const existingNotifications = document.querySelectorAll('.notification');
     existingNotifications.forEach(notification => notification.remove());
-    
+
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
@@ -175,7 +175,7 @@ function showNotification(message, type = 'info') {
             <i class="fas fa-times"></i>
         </button>
     `;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -193,16 +193,16 @@ function showNotification(message, type = 'info') {
         max-width: 400px;
         animation: slideInRight 0.3s ease-out;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Close button functionality
     const closeButton = notification.querySelector('.notification-close');
     closeButton.addEventListener('click', () => {
         notification.style.animation = 'slideOutRight 0.3s ease-in';
         setTimeout(() => notification.remove(), 300);
     });
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
@@ -268,7 +268,7 @@ const floatingHireBtn = document.querySelector('.floating-hire-btn');
 if (floatingHireBtn) {
     floatingHireBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
         // Open WhatsApp with pre-filled message
         const message = encodeURIComponent(
             "Hello Ghulam Sarwar Khan,\n\nI'm interested in your services as a Senior Executive Secretary & AI Developer.\n\nPlease provide me with more information about your availability and services.\n\nBest regards,"
@@ -282,7 +282,7 @@ if (floatingHireBtn) {
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const shapes = document.querySelectorAll('.shape');
-    
+
     shapes.forEach((shape, index) => {
         const speed = 0.5 + (index * 0.1);
         const yPos = -(scrolled * speed);
@@ -293,13 +293,13 @@ window.addEventListener('scroll', () => {
 // ===== PARTICLE HOVER EFFECTS =====
 document.addEventListener('DOMContentLoaded', () => {
     const shapes = document.querySelectorAll('.shape');
-    
+
     shapes.forEach(shape => {
         shape.addEventListener('mouseenter', () => {
             shape.style.transform = 'scale(1.1)';
             shape.style.opacity = '0.2';
         });
-        
+
         shape.addEventListener('mouseleave', () => {
             shape.style.transform = 'scale(1)';
             shape.style.opacity = '0.1';
@@ -315,7 +315,7 @@ document.addEventListener('keydown', (e) => {
         navLinksContainer.classList.remove('active');
         document.body.classList.remove('menu-open');
         menuToggle.setAttribute('aria-expanded', 'false');
-        
+
         // Reset hamburger icon
         const spans = menuToggle.querySelectorAll('span');
         spans.forEach(span => {
@@ -362,11 +362,11 @@ const debouncedScrollHandler = debounce(() => {
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         navbar.style.boxShadow = 'none';
     }
-    
+
     // Active link highlighting
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -374,7 +374,7 @@ const debouncedScrollHandler = debounce(() => {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -389,12 +389,12 @@ window.addEventListener('scroll', debouncedScrollHandler);
 function trackEvent(eventName, eventData = {}) {
     // Placeholder for analytics tracking
     console.log('Analytics Event:', eventName, eventData);
-    
+
     // Example: Google Analytics 4
     if (typeof gtag !== 'undefined') {
         gtag('event', eventName, eventData);
     }
-    
+
     // Example: Custom analytics
     if (typeof window.trackEvent === 'function') {
         window.trackEvent(eventName, eventData);
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
+
     // Track project clicks
     document.querySelectorAll('.project-links a').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-    
+
     // Track CV download
     const cvDownloadLink = document.querySelector('a[href*="Resume GSK.pdf"]');
     if (cvDownloadLink) {
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
+
     // Track AI Agent clicks
     const aiAgentLink = document.querySelector('a[href*="ai-agent-appgit"]');
     if (aiAgentLink) {
@@ -519,4 +519,45 @@ console.log('🎯 Professional Portfolio JavaScript Loaded Successfully!');
 console.log('📧 Contact form integrated with Formspree');
 console.log('📱 Mobile-responsive design with smooth animations');
 console.log('♿ Accessibility features enabled');
-console.log('📊 Analytics tracking ready');
+// ===== TIME & DATE DISPLAY =====
+function updateTime() {
+    const timeDisplay = document.getElementById('current-time-display');
+    if (timeDisplay) {
+        const now = new Date();
+
+        // Format Date: "Mon, Jan 01"
+        const dateOptions = { weekday: 'short', month: 'short', day: 'numeric' };
+        const dateString = now.toLocaleDateString('en-US', dateOptions).toUpperCase();
+
+        // Format Time: "12:00:00 PM"
+        const timeString = now.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+        // Construct HTML with Tech styling structure
+        timeDisplay.innerHTML = `
+            <span class="tech-date">${dateString}</span>
+            <span class="tech-separator">|</span>
+            <span class="tech-time">${timeString}</span>
+        `;
+    }
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+updateTime(); // Initial call
+
+// ===== KHIZR CHAT WIDGET =====
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('khizr-toggle-btn');
+    const chatBox = document.getElementById('khizr-chatbox');
+
+    if (toggleBtn && chatBox) {
+        toggleBtn.addEventListener('click', () => {
+            chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+            // Track click
+            trackEvent('khizr_chat_toggle', {
+                action: chatBox.style.display === 'none' ? 'close' : 'open'
+            });
+        });
+    }
+});
+
