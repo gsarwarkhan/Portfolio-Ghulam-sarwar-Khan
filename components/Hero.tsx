@@ -32,17 +32,17 @@ export default function Hero() {
                     {/* Right Column - Name, Title, and Info */}
                     <div className="lg:col-span-3 text-left space-y-6" data-aos="fade-left">
                         <div className="space-y-3">
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
                                 GHULAM SARWAR KHAN
                             </h1>
                             <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent rounded-full"></div>
                         </div>
 
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent-light">
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-accent-light">
                             Secretary General
                         </h2>
 
-                        <p className="text-xl sm:text-2xl text-neutral-gray-light font-medium">
+                        <p className="text-lg sm:text-xl lg:text-2xl text-neutral-gray-light font-medium">
                             Pakistan Tea Association
                         </p>
 

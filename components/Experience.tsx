@@ -12,18 +12,18 @@ export default function Experience() {
                 </h2>
 
                 <div className="relative">
-                    {/* Timeline Line */}
-                    <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary" />
+                    {/* Timeline Line - Left Side */}
+                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary" />
 
-                    {/* Timeline Items */}
+                    {/* Timeline Items - All Left Aligned */}
                     <div className="space-y-12">
-                        {EXPERIENCE.map((exp, index) => (
-                            <div key={exp.id} className={`relative flex items-start gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                        {EXPERIENCE.map((exp) => (
+                            <div key={exp.id} className="relative flex items-start gap-6">
                                 {/* Timeline Dot */}
-                                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10" />
+                                <div className="absolute left-8 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10" />
 
-                                {/* Content */}
-                                <div className={`flex-1 ml-20 md:ml-0 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+                                {/* Content - Always on Right */}
+                                <div className="flex-1 ml-20">
                                     <span className="inline-block px-4 py-1 bg-primary text-white text-sm font-semibold rounded-full mb-3">
                                         {exp.period}
                                     </span>
@@ -31,9 +31,9 @@ export default function Experience() {
                                         <h3 className="text-xl font-display font-bold text-slate-900 mb-1">{exp.title}</h3>
                                         <h4 className="text-lg text-primary font-semibold mb-3">{exp.company}</h4>
                                         <p className="text-slate-600 mb-4">{exp.description}</p>
-                                        <ul className={`space-y-2 text-sm text-slate-600 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                                        <ul className="space-y-2 text-sm text-slate-600">
                                             {exp.responsibilities.map((resp, idx) => (
-                                                <li key={idx} className={`flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                                                <li key={idx} className="flex items-start gap-2">
                                                     <svg className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                                     </svg>
