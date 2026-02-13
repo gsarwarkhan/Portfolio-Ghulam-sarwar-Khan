@@ -113,34 +113,37 @@ export default function Hero() {
                     </Link>
                 </div>
 
-                {/* Professional Affiliations Bar */}
-                <div className="mt-16 pt-8 border-t border-white/10" data-aos="fade-up">
-                    <p className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-8 text-center lg:text-left">
-                        Professional Affiliations
-                    </p>
-                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-60 hover:opacity-100 transition-opacity duration-500">
-                        {[
-                            { src: "/images/Pakistan Tea Association logo.jpg", alt: "Pakistan Tea Association", width: 60, height: 60 },
-                            { src: "/images/FPCCI logo.jpg", alt: "FPCCI", width: 60, height: 60 },
-                            { src: "/images/Governour House Logo.png", alt: "Governor House", width: 60, height: 60 },
-                            { src: "/images/KCCI logo.jpg", alt: "KCCI", width: 60, height: 60 },
-                            { src: "/images/Orient Rental Modaraba Logo.jpg", alt: "Orient Rental Modaraba", width: 100, height: 40 },
-                        ].map((logo) => (
-                            <div
-                                key={logo.alt}
-                                className="relative group grayscale hover:grayscale-0 transition-all duration-300"
-                                title={logo.alt}
-                            >
-                                <div className="absolute inset-0 bg-white/5 rounded-lg -m-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <Image
-                                    src={logo.src}
-                                    alt={logo.alt}
-                                    width={logo.width}
-                                    height={logo.height}
-                                    className="h-10 sm:h-12 w-auto object-contain"
-                                />
-                            </div>
-                        ))}
+                {/* Professional Affiliations Bar - Enhanced */}
+                <div className="mt-20 relative w-full" data-aos="fade-up">
+                    <div className="absolute inset-0 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 -mx-4 sm:mx-0 p-8 sm:p-12" />
+                    <div className="relative text-center lg:text-left">
+                        <p className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-10 opacity-70">
+                            Professional Affiliations & Institutional Partners
+                        </p>
+                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-12 sm:gap-16">
+                            {[
+                                { src: "/images/Pakistan Tea Association logo.jpg", alt: "Pakistan Tea Association", width: 80, height: 80 },
+                                { src: "/images/FPCCI logo.jpg", alt: "FPCCI", width: 80, height: 80 },
+                                { src: "/images/Governour House Logo.png", alt: "Governor House", width: 80, height: 80 },
+                                { src: "/images/KCCI logo.jpg", alt: "KCCI", width: 80, height: 80 },
+                                { src: "/images/Orient Rental Modaraba Logo.jpg", alt: "Orient Rental Modaraba", width: 140, height: 50 },
+                            ].map((logo) => (
+                                <div
+                                    key={logo.alt}
+                                    className="relative group transition-all duration-500 hover:scale-110"
+                                    title={logo.alt}
+                                >
+                                    <div className="absolute inset-0 bg-primary/20 rounded-xl -m-4 opacity-0 group-hover:opacity-100 blur-xl transition-opacity" />
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        width={logo.width}
+                                        height={logo.height}
+                                        className="h-12 sm:h-16 w-auto object-contain brightness-110 group-hover:brightness-125 transition-all"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 

@@ -69,6 +69,7 @@ export const EXPERIENCE = [
         id: "pta-sg",
         title: "Secretary General",
         company: "Pakistan Tea Association",
+        logoUrl: "/images/Pakistan Tea Association logo.jpg",
         period: "2026 - Present",
         description: "Leading the national trade body for the tea industry, overseeing institutional standardization, membership compliance, and strategic policy correspondence.",
         responsibilities: [
@@ -83,6 +84,7 @@ export const EXPERIENCE = [
         id: "kcci-deputy",
         title: "Deputy Secretary",
         company: "Karachi Chamber of Commerce and Industry (KCCI)",
+        logoUrl: "/images/KCCI logo.jpg",
         period: "July 2022 - January 2025",
         description: "Leading administrative operations and strategic initiatives at Pakistan's premier business chamber. Managing executive communications, stakeholder relations, and chamber development programs while driving digital transformation initiatives.",
         responsibilities: [
@@ -96,6 +98,7 @@ export const EXPERIENCE = [
         id: "orient-rental",
         title: "Assistant Manager Admin & CSR",
         company: "Orient Rental Modaraba",
+        logoUrl: "/images/Orient Rental Modaraba Logo.jpg",
         period: "2020 - 2022",
         description: "Led comprehensive administrative operations and corporate social responsibility initiatives, implementing process improvements and community engagement programs.",
         responsibilities: [
@@ -122,6 +125,7 @@ export const EXPERIENCE = [
         id: "fpcci",
         title: "Assistant Manager",
         company: "The Federation of Pakistan Chambers of Commerce and Industry (FPCCI)",
+        logoUrl: "/images/FPCCI logo.jpg",
         period: "2010 - 2016",
         description: "Coordinated with business chambers nationwide and managed key stakeholder relationships, facilitating business development and inter-chamber cooperation programs.",
         responsibilities: [

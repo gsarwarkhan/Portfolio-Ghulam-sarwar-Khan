@@ -1,6 +1,7 @@
 "use client";
 
 import { EXPERIENCE } from "@/lib/constants";
+import Image from "next/image";
 
 export default function Experience() {
     return (
@@ -28,8 +29,23 @@ export default function Experience() {
                                         {exp.period}
                                     </span>
                                     <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800">
-                                        <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-1">{exp.title}</h3>
-                                        <h4 className="text-lg text-primary dark:text-primary-light font-semibold mb-3">{exp.company}</h4>
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                                            <div>
+                                                <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-1">{exp.title}</h3>
+                                                <h4 className="text-lg text-primary dark:text-primary-light font-semibold">{exp.company}</h4>
+                                            </div>
+                                            {exp.logoUrl && (
+                                                <div className="flex-shrink-0 bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm">
+                                                    <Image
+                                                        src={exp.logoUrl}
+                                                        alt={exp.company}
+                                                        width={60}
+                                                        height={60}
+                                                        className="h-10 w-auto object-contain"
+                                                    />
+                                                </div>
+                                            )}
+                                        </div>
                                         <p className="text-slate-600 dark:text-slate-400 mb-4">{exp.description}</p>
                                         <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                                             {exp.responsibilities.map((resp, idx) => (
