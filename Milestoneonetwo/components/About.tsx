@@ -18,7 +18,7 @@ export default function About() {
                     <div className="bg-gradient-to-br from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10 p-8 rounded-xl border-l-4 border-primary">
                         <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">Executive Summary</h3>
                         <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                            As <strong className="text-primary dark:text-primary-light">Secretary General of the Pakistan Tea Association</strong>, I lead the national trade body representing Pakistan's tea industry, overseeing institutional standardization, membership compliance, and strategic policy development. My career trajectory uniquely positions me as a <strong className="text-primary dark:text-primary-light">"Future-Ready Leader"</strong> — integrating 15+ years of proven executive administration with cutting-edge AI capabilities to drive organizational excellence and digital transformation.
+                            As <strong className="text-primary dark:text-primary-light">Secretary General of the Pakistan Tea Association</strong>, I lead the national trade body representing Pakistan's tea industry, overseeing institutional standardization, membership compliance, and strategic policy development. My career trajectory uniquely positions me as a <strong className="text-primary dark:text-primary-light">"Future-Ready Leader"</strong> — integrating 25+ years of proven impact in serving senior executives with cutting-edge AI capabilities to drive organizational excellence and digital transformation.
                         </p>
                     </div>
 
@@ -131,7 +131,7 @@ export default function About() {
                             <div>
                                 <h5 className="font-semibold text-primary dark:text-primary-light mb-2">Traditional Excellence</h5>
                                 <ul className="space-y-1 text-slate-600 dark:text-slate-400 text-sm">
-                                    <li>✓ 15+ years executive administration</li>
+                                    <li>✓ 25+ years serving senior executives</li>
                                     <li>✓ Proven governance & compliance leadership</li>
                                     <li>✓ International stakeholder management</li>
                                     <li>✓ Strategic policy development</li>
