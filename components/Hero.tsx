@@ -10,116 +10,109 @@ export default function Hero() {
             id="home"
             className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-neutral-gray-dark to-slate-800 text-white relative overflow-hidden"
         >
-            <div className="max-w-6xl mx-auto z-10">
-                <div className="grid lg:grid-cols-5 gap-12 items-center">
-                    {/* Left Column - Profile Image */}
-                    <div className="lg:col-span-2 flex justify-center lg:justify-end" data-aos="fade-right">
-                        <div className="relative inline-block">
-                            <div className="relative w-64 h-64 sm:w-72 sm:h-72">
-                                <Image
-                                    src="/images/Profile.png"
-                                    alt="Ghulam Sarwar Khan - Secretary General"
-                                    width={288}
-                                    height={288}
-                                    className="rounded-full object-cover border-4 border-white shadow-2xl relative z-10"
-                                    priority
-                                />
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border-3 border-transparent bg-gradient-to-r from-primary to-accent animate-rotate" style={{ WebkitMaskComposite: "destination-out", maskComposite: "exclude" }} />
-                            </div>
+            <div className="max-w-7xl mx-auto z-10 px-4">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+                    {/* Left Side: Professional Summary */}
+                    <div className="flex-1 text-center lg:text-left space-y-8" data-aos="fade-right">
+                        <div className="space-y-4">
+                            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary-light text-sm font-bold tracking-wider uppercase rounded-full border border-primary/20">
+                                Executive Profile
+                            </span>
+                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-black text-white leading-[1.1]">
+                                GHULAM <br className="hidden lg:block" />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-accent-light to-primary-light">
+                                    SARWAR KHAN
+                                </span>
+                            </h1>
+                        </div>
+
+                        <div className="space-y-2">
+                            <h2 className="text-2xl sm:text-3xl font-display font-bold text-white/90">
+                                Secretary General
+                            </h2>
+                            <p className="text-xl sm:text-2xl text-accent-light font-medium tracking-wide">
+                                Pakistan Tea Association
+                            </p>
+                        </div>
+
+                        <div className="max-w-2xl mx-auto lg:mx-0 space-y-4 text-neutral-gray-light leading-relaxed">
+                            <p className="text-lg">
+                                Orchestrating national trade governance and institutional compliance while pioneering
+                                <span className="text-white font-semibold"> AI-driven transformation</span> in trade body operations.
+                            </p>
+                        </div>
+
+                        {/* Core Competencies - Slimmer Version */}
+                        <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+                            {[
+                                { label: "Trade Governance", icon: "M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" },
+                                { label: "AI Innovation", icon: "M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" },
+                                { label: "Policy Development", icon: "M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633z" }
+                            ].map((item) => (
+                                <span key={item.label} className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-colors">
+                                    <svg className="w-4 h-4 text-accent-light" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d={item.icon} />
+                                    </svg>
+                                    {item.label}
+                                </span>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Right Column - Name, Title, and Info */}
-                    <div className="lg:col-span-3 text-left space-y-6" data-aos="fade-left">
-                        <div className="space-y-3">
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-                                GHULAM SARWAR KHAN
-                            </h1>
-                            <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-                        </div>
+                    {/* Right Side: Profile Image with Executive Framing */}
+                    <div className="relative" data-aos="fade-left">
+                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
+                            {/* Animated Background Rings */}
+                            <div className="absolute inset-0 rounded-full border-[10px] border-primary/20 scale-110 animate-pulse" />
+                            <div className="absolute inset-0 rounded-full border-[1px] border-white/20 scale-125" />
 
-                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-accent-light">
-                            Secretary General
-                        </h2>
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-white dark:border-slate-800 shadow-[0_0_50px_rgba(79,70,229,0.3)] z-10 transition-transform duration-500 hover:scale-105">
+                                <Image
+                                    src="/images/Profile.png"
+                                    alt="Ghulam Sarwar Khan - Secretary General"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                            </div>
 
-                        <p className="text-lg sm:text-xl lg:text-2xl text-neutral-gray-light font-medium">
-                            Pakistan Tea Association
-                        </p>
-
-                        <div className="space-y-3 text-base sm:text-lg text-neutral-gray-light leading-relaxed">
-                            <p>
-                                <strong className="text-white">Executive Leadership</strong> in trade governance, institutional compliance, and strategic policy development
-                            </p>
-                            <p>
-                                <strong className="text-white">AI Integration Pioneer</strong> combining traditional administrative excellence with cutting-edge artificial intelligence
-                            </p>
-                            <p>
-                                <strong className="text-white">Future-Ready Leader</strong> with 15+ years of high-level executive administration across national and international trade bodies
-                            </p>
-                        </div>
-
-                        {/* Core Competencies */}
-                        <div className="flex flex-wrap gap-3 mt-6">
-                            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-lg border border-white/10 text-white text-sm font-semibold">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                                </svg>
-                                Trade Governance
-                            </span>
-                            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 backdrop-blur-lg border border-white/10 text-white text-sm font-semibold">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
-                                </svg>
-                                AI Innovation
-                            </span>
-                            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-lg border border-white/10 text-white text-sm font-semibold">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
-                                Policy Development
-                            </span>
+                            {/* Tech/Executive Badges */}
+                            <div className="absolute -bottom-4 -left-4 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-2xl z-20 border border-slate-100 hidden sm:block">
+                                <div className="text-primary font-bold text-xl uppercase tracking-tighter">15+ Years</div>
+                                <div className="text-slate-500 text-xs font-semibold">Executive Leadership</div>
+                            </div>
+                            <div className="absolute top-10 -right-8 bg-accent p-4 rounded-2xl shadow-2xl z-20 border border-white/20 hidden sm:block">
+                                <div className="text-white font-bold text-xl uppercase tracking-tighter">95th %</div>
+                                <div className="text-white/80 text-xs font-semibold">AI Integration</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* CTAs - Centered below */}
-                <div className="flex flex-wrap justify-center gap-4 mt-12" data-aos="fade-up">
+                {/* CTAs - Redesigned Row */}
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-16 pt-8 border-t border-white/10" data-aos="fade-up">
                     <Link
                         href="https://ai-agent-appgit-6rivk5mxhzbkanszvdshte.streamlit.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm sm:text-base"
+                        className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl font-bold shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-1"
                     >
+                        <span className="absolute inset-0 bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-xl" />
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                             <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
                         </svg>
-                        Experience Khizr - My AI Agent
+                        Experience My AI Agent
                     </Link>
                     <Link
                         href="/Resume-GSK.pdf"
                         download
-                        className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all border-2 border-primary text-sm sm:text-base"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 rounded-xl font-bold hover:bg-white hover:text-slate-900 transition-all hover:-translate-y-1"
                     >
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                         </svg>
                         Download Executive CV
-                    </Link>
-                    <Link
-                        href="#about"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
-                        }}
-                        className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white rounded-lg font-semibold border-2 border-white/30 hover:bg-white/10 hover:border-white hover:scale-105 transition-all text-sm sm:text-base"
-                    >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                            <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                        </svg>
-                        Learn More
                     </Link>
                 </div>
 

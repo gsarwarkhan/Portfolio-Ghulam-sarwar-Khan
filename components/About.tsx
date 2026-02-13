@@ -2,36 +2,37 @@
 
 export default function About() {
     return (
-        <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100">
+        <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/50 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-center mb-4 text-slate-900 relative">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-center mb-8 text-slate-900 dark:text-white relative">
                     Executive Profile
-                    <span className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
+                    <span className="absolute bottom-[-15px] left-1/2 -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full" />
                 </h2>
-                <p className="text-center text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
-                    Secretary General with proven expertise in trade governance, compliance leadership, and AI-driven institutional transformation
+                <p className="text-center text-lg sm:text-xl text-slate-600 mb-16 max-w-4xl mx-auto leading-relaxed mt-12">
+                    A visionary <span className="text-primary font-bold">Secretary General</span> with a unique focus on bridging traditional trade governance with
+                    <span className="text-accent font-bold"> AI-driven institutional transformation</span>.
                 </p>
 
                 <div className="space-y-8">
                     {/* Executive Summary */}
-                    <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-xl border-l-4 border-primary">
-                        <h3 className="text-2xl font-display font-bold text-slate-900 mb-4">Executive Summary</h3>
-                        <p className="text-lg text-slate-700 leading-relaxed">
-                            As <strong className="text-primary">Secretary General of the Pakistan Tea Association</strong>, I lead the national trade body representing Pakistan's tea industry, overseeing institutional standardization, membership compliance, and strategic policy development. My career trajectory uniquely positions me as a <strong className="text-primary">"Future-Ready Leader"</strong> — integrating 15+ years of proven executive administration with cutting-edge AI capabilities to drive organizational excellence and digital transformation.
+                    <div className="bg-gradient-to-br from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10 p-8 rounded-xl border-l-4 border-primary">
+                        <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">Executive Summary</h3>
+                        <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                            As <strong className="text-primary dark:text-primary-light">Secretary General of the Pakistan Tea Association</strong>, I lead the national trade body representing Pakistan's tea industry, overseeing institutional standardization, membership compliance, and strategic policy development. My career trajectory uniquely positions me as a <strong className="text-primary dark:text-primary-light">"Future-Ready Leader"</strong> — integrating 15+ years of proven executive administration with cutting-edge AI capabilities to drive organizational excellence and digital transformation.
                         </p>
                     </div>
 
                     {/* Core Competencies Grid */}
                     <div className="grid md:grid-cols-3 gap-6">
                         {/* Governance & Compliance */}
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-slate-200">
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center mb-4">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-display font-bold text-slate-900 mb-3">Governance & Compliance</h4>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <h4 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-3">Governance & Compliance</h4>
+                            <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
                                 <li>• Institutional documentation standardization</li>
                                 <li>• Membership compliance oversight</li>
                                 <li>• Executive Committee coordination</li>
@@ -40,14 +41,14 @@ export default function About() {
                         </div>
 
                         {/* Strategic Leadership */}
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-slate-200">
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800">
                             <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent-dark rounded-lg flex items-center justify-center mb-4">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-display font-bold text-slate-900 mb-3">Strategic Leadership</h4>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <h4 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-3">Strategic Leadership</h4>
+                            <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
                                 <li>• High-level stakeholder engagement</li>
                                 <li>• Trade policy advocacy</li>
                                 <li>• International delegation management</li>
@@ -56,15 +57,15 @@ export default function About() {
                         </div>
 
                         {/* AI & Innovation */}
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-slate-200">
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                                     <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-display font-bold text-slate-900 mb-3">AI & Innovation</h4>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <h4 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-3">AI & Innovation</h4>
+                            <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
                                 <li>• Generative AI & Agentic AI (95th percentile)</li>
                                 <li>• AI-driven process optimization</li>
                                 <li>• Digital transformation initiatives</li>
@@ -124,12 +125,12 @@ export default function About() {
                     </div>
 
                     {/* Value Proposition */}
-                    <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary mt-8">
-                        <h3 className="text-2xl font-display font-bold text-slate-900 mb-4 text-center">What I Bring to Organizations</h3>
+                    <div className="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg border-t-4 border-primary mt-8 border border-transparent dark:border-slate-800">
+                        <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 text-center">What I Bring to Organizations</h3>
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
-                                <h5 className="font-semibold text-primary mb-2">Traditional Excellence</h5>
-                                <ul className="space-y-1 text-slate-600 text-sm">
+                                <h5 className="font-semibold text-primary dark:text-primary-light mb-2">Traditional Excellence</h5>
+                                <ul className="space-y-1 text-slate-600 dark:text-slate-400 text-sm">
                                     <li>✓ 15+ years executive administration</li>
                                     <li>✓ Proven governance & compliance leadership</li>
                                     <li>✓ International stakeholder management</li>
@@ -137,8 +138,8 @@ export default function About() {
                                 </ul>
                             </div>
                             <div>
-                                <h5 className="font-semibold text-accent mb-2">Future-Ready Innovation</h5>
-                                <ul className="space-y-1 text-slate-600 text-sm">
+                                <h5 className="font-semibold text-accent dark:text-accent-light mb-2">Future-Ready Innovation</h5>
+                                <ul className="space-y-1 text-slate-600 dark:text-slate-400 text-sm">
                                     <li>✓ AI-driven process optimization</li>
                                     <li>✓ Digital transformation expertise</li>
                                     <li>✓ Technology integration leadership</li>

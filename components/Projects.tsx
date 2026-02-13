@@ -8,16 +8,16 @@ export default function Projects() {
     const otherProjects = PROJECTS.filter(p => !p.featured);
 
     return (
-        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-center mb-12 text-slate-900 relative">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-center mb-12 text-slate-900 dark:text-white relative">
                     Ongoing & Featured Projects
                     <span className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
                 </h2>
 
                 {/* Featured Project */}
                 {featuredProject && (
-                    <div className="mb-12 bg-white rounded-2xl p-8 shadow-xl border-t-4 border-primary">
+                    <div className="mb-12 bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-xl border-t-4 border-primary border border-transparent dark:border-slate-800 transition-all duration-300">
                         <div className="flex items-center justify-between mb-6">
                             <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center">
                                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -27,8 +27,8 @@ export default function Projects() {
                             </div>
                             <span className="px-4 py-1 bg-accent text-white text-sm font-semibold rounded-full">Featured</span>
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-4">{featuredProject.title}</h3>
-                        <p className="text-slate-600 mb-6 leading-relaxed">{featuredProject.description}</p>
+                        <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white mb-4">{featuredProject.title}</h3>
+                        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{featuredProject.description}</p>
                         <div className="flex flex-wrap gap-2 mb-6">
                             {featuredProject.tech.map((tech) => (
                                 <span key={tech} className="px-3 py-1 bg-gradient-to-r from-primary to-primary-dark text-white text-sm font-medium rounded-full">
@@ -71,17 +71,17 @@ export default function Projects() {
                 {/* Other Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {otherProjects.map((project) => (
-                        <div key={project.id} className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-primary">
+                        <div key={project.id} className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-display font-bold text-slate-900 mb-3">{project.title}</h3>
-                            <p className="text-slate-600 mb-4 text-sm leading-relaxed">{project.description}</p>
+                            <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-3">{project.title}</h3>
+                            <p className="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">{project.description}</p>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tech.map((tech) => (
-                                    <span key={tech} className="px-2 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded">
+                                    <span key={tech} className="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded">
                                         {tech}
                                     </span>
                                 ))}

@@ -5,7 +5,7 @@ import { SOCIAL_LINKS } from "@/lib/constants";
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800 dark:border-slate-900 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-8">
                     {/* About */}

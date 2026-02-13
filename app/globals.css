@@ -11,9 +11,19 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-50;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
   }
 }
 
@@ -21,9 +31,9 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
-  
+
   .glass {
-    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+    @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-white/10;
   }
 }
 
@@ -33,6 +43,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -44,6 +55,7 @@
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(100%);
     opacity: 0;

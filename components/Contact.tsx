@@ -36,9 +36,9 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100">
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/50 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-center mb-16 text-slate-900 relative">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-center mb-16 text-slate-900 dark:text-white relative">
                     Get In Touch
                     <span className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
                 </h2>
@@ -46,19 +46,19 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-12">
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md">
+                        <div className="flex items-start gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-transparent dark:border-slate-800">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 className="font-semibold text-slate-900 mb-1">Phone</h4>
-                                <p className="text-slate-600">{CONTACT_INFO.phone}</p>
+                                <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Phone</h4>
+                                <p className="text-slate-600 dark:text-slate-400">{CONTACT_INFO.phone}</p>
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md">
+                        <div className="flex items-start gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-transparent dark:border-slate-800">
                             <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent-dark rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -66,26 +66,26 @@ export default function Contact() {
                                 </svg>
                             </div>
                             <div>
-                                <h4 className="font-semibold text-slate-900 mb-1">Email</h4>
-                                <p className="text-slate-600">{CONTACT_INFO.email}</p>
+                                <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email</h4>
+                                <p className="text-slate-600 dark:text-slate-400">{CONTACT_INFO.email}</p>
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md">
+                        <div className="flex items-start gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-transparent dark:border-slate-800">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 className="font-semibold text-slate-900 mb-1">Location</h4>
-                                <p className="text-slate-600">{CONTACT_INFO.location}</p>
+                                <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Location</h4>
+                                <p className="text-slate-600 dark:text-slate-400">{CONTACT_INFO.location}</p>
                             </div>
                         </div>
 
                         {/* Social Links */}
                         <div className="pt-6">
-                            <h3 className="text-xl font-display font-bold text-slate-900 mb-4">Connect With Me</h3>
+                            <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-4">Connect With Me</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 {[
                                     { name: 'LinkedIn', href: SOCIAL_LINKS.linkedin, color: 'from-blue-600 to-blue-700' },
@@ -108,10 +108,10 @@ export default function Contact() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-white p-8 rounded-xl shadow-md">
+                    <div className="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border border-transparent dark:border-slate-800">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+                                <label htmlFor="name" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                                     Name
                                 </label>
                                 <input
@@ -119,12 +119,12 @@ export default function Contact() {
                                     id="name"
                                     name="name"
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all dark:text-white"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                                <label htmlFor="email" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                                     Email
                                 </label>
                                 <input
@@ -132,12 +132,12 @@ export default function Contact() {
                                     id="email"
                                     name="email"
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all dark:text-white"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">
+                                <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                                     Subject
                                 </label>
                                 <input
@@ -145,12 +145,12 @@ export default function Contact() {
                                     id="subject"
                                     name="subject"
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all dark:text-white"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+                                <label htmlFor="message" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                                     Message
                                 </label>
                                 <textarea
@@ -158,7 +158,7 @@ export default function Contact() {
                                     name="message"
                                     rows={5}
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none dark:text-white"
                                 />
                             </div>
 

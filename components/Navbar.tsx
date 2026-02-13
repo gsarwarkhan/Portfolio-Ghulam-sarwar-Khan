@@ -10,6 +10,26 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
     const [currentTime, setCurrentTime] = useState(new Date());
+    const [theme, setTheme] = useState<"light" | "dark">("light");
+
+    // Handle Theme
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme") as "light" | "dark";
+        if (savedTheme) {
+            setTheme(savedTheme);
+            document.documentElement.classList.toggle("dark", savedTheme === "dark");
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            setTheme("dark");
+            document.documentElement.classList.add("dark");
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+        document.documentElement.classList.toggle("dark");
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,8 +69,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-white/98 backdrop-blur-xl shadow-lg"
-                    : "bg-white/95 backdrop-blur-xl"
+                ? "bg-white/98 dark:bg-slate-950/98 backdrop-blur-xl shadow-lg border-b border-slate-200 dark:border-slate-800"
+                : "bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,55 +92,81 @@ export default function Navbar() {
                     </Link>
 
                     {/* Time Display */}
-                    <div className="hidden md:flex items-center gap-2 text-sm text-neutral-gray font-medium">
-                        <span className="text-primary font-semibold">{formatDate(currentTime)}</span>
-                        <span className="text-neutral-gray-light">|</span>
+                    <div className="hidden md:flex items-center gap-2 text-sm text-neutral-gray dark:text-slate-400 font-medium">
+                        <span className="text-primary dark:text-primary-light font-semibold">{formatDate(currentTime)}</span>
+                        <span className="text-neutral-gray-light dark:text-slate-700">|</span>
                         <span className="text-accent font-semibold">{formatTime(currentTime)}</span>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <ul className="hidden lg:flex items-center gap-8">
-                        {NAV_ITEMS.map((item) => (
-                            <li key={item.href}>
-                                <Link
-                                    href={item.href}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToSection(item.href);
-                                    }}
-                                    className={`relative text-sm font-medium transition-colors pb-1 ${activeSection === item.href.substring(1)
-                                            ? "text-primary"
-                                            : "text-neutral-gray hover:text-primary"
-                                        }`}
-                                >
-                                    {item.label}
-                                    {activeSection === item.href.substring(1) && (
-                                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
-                                    )}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="hidden lg:flex items-center gap-8">
+                        <ul className="flex items-center gap-8">
+                            {NAV_ITEMS.map((item) => (
+                                <li key={item.href}>
+                                    <Link
+                                        href={item.href}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            scrollToSection(item.href);
+                                        }}
+                                        className={`relative text-sm font-medium transition-colors pb-1 ${activeSection === item.href.substring(1)
+                                            ? "text-primary dark:text-primary-light"
+                                            : "text-neutral-gray dark:text-slate-400 hover:text-primary dark:hover:text-white"
+                                            }`}
+                                    >
+                                        {item.label}
+                                        {activeSection === item.href.substring(1) && (
+                                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+                                        )}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="lg:hidden flex flex-col gap-1 p-2"
-                        aria-label="Toggle menu"
-                    >
-                        <span
-                            className={`w-6 h-0.5 bg-primary transition-all ${isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                                }`}
-                        />
-                        <span
-                            className={`w-6 h-0.5 bg-primary transition-all ${isMobileMenuOpen ? "opacity-0" : ""
-                                }`}
-                        />
-                        <span
-                            className={`w-6 h-0.5 bg-primary transition-all ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                                }`}
-                        />
-                    </button>
+                        {/* Theme Toggle */}
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+                            aria-label="Toggle theme"
+                        >
+                            {theme === "light" ? (
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                </svg>
+                            ) : (
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+
+                    {/* Mobile Controls */}
+                    <div className="lg:hidden flex items-center gap-4">
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300"
+                        >
+                            {theme === "light" ? (
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                </svg>
+                            ) : (
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            )}
+                        </button>
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="flex flex-col gap-1.5 p-2"
+                            aria-label="Toggle menu"
+                        >
+                            <span className={`w-6 h-0.5 bg-primary dark:bg-primary-light transition-all ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                            <span className={`w-6 h-0.5 bg-primary dark:bg-primary-light transition-all ${isMobileMenuOpen ? "opacity-0" : ""}`} />
+                            <span className={`w-6 h-0.5 bg-primary dark:bg-primary-light transition-all ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Menu */}
@@ -136,8 +182,8 @@ export default function Navbar() {
                                             scrollToSection(item.href);
                                         }}
                                         className={`block py-2 px-4 rounded-lg transition-colors ${activeSection === item.href.substring(1)
-                                                ? "bg-primary text-white"
-                                                : "text-neutral-gray hover:bg-slate-100"
+                                            ? "bg-primary dark:bg-primary-dark text-white"
+                                            : "text-neutral-gray dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 dark:hover:text-white"
                                             }`}
                                     >
                                         {item.label}

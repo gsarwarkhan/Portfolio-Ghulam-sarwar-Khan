@@ -14,7 +14,7 @@ export default function FloatingHireButton() {
     return (
         <button
             onClick={handleClick}
-            className="fixed bottom-8 right-8 z-50 flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full shadow-2xl hover:shadow-glow hover:scale-105 transition-all animate-float-button"
+            className="fixed bottom-8 right-8 z-50 flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full shadow-2xl hover:shadow-primary/30 dark:hover:shadow-primary/20 hover:scale-105 transition-all animate-float-button"
             aria-label="Hire Me"
         >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
