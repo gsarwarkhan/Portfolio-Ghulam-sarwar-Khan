@@ -18,11 +18,8 @@ export default function Hero() {
                             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary-light text-sm font-bold tracking-wider uppercase rounded-full border border-primary/20">
                                 Executive Profile
                             </span>
-                            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-display font-black text-white leading-[1.1]">
-                                GHULAM <br className="hidden lg:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-accent-light to-primary-light">
-                                    SARWAR KHAN
-                                </span>
+                            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-display font-black text-white leading-tight">
+                                GHULAM SARWAR KHAN
                             </h1>
                         </div>
 
@@ -61,7 +58,7 @@ export default function Hero() {
 
                     {/* Right Side: Profile Image with Executive Framing */}
                     <div className="relative" data-aos="fade-left">
-                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[380px] lg:h-[380px]">
+                        <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-[320px] lg:h-[320px]">
                             {/* Animated Background Rings */}
                             <div className="absolute inset-0 rounded-full border-[10px] border-primary/20 scale-110 animate-pulse" />
                             <div className="absolute inset-0 rounded-full border-[1px] border-white/20 scale-125" />
