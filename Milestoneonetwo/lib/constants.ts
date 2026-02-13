@@ -122,7 +122,7 @@ export const EXPERIENCE = [
         id: "fpcci",
         title: "Assistant Manager",
         company: "The Federation of Pakistan Chambers of Commerce and Industry (FPCCI)",
-        period: "2016 - 2018",
+        period: "2010 - 2016",
         description: "Coordinated with business chambers nationwide and managed key stakeholder relationships, facilitating business development and inter-chamber cooperation programs.",
         responsibilities: [
             "Coordinated with 100+ business chambers across Pakistan",
