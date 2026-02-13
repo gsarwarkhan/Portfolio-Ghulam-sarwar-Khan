@@ -75,7 +75,7 @@ export default function Hero() {
 
                             {/* Tech/Executive Badges */}
                             <div className="absolute -bottom-4 -left-4 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-2xl z-20 border border-slate-100 hidden sm:block">
-                                <div className="text-primary font-bold text-xl uppercase tracking-tighter">25+ Years</div>
+                                <div className="text-primary font-bold text-xl uppercase tracking-tighter">16+ Years</div>
                                 <div className="text-slate-500 text-xs font-semibold">Serving Senior Executives</div>
                             </div>
                             <div className="absolute top-10 -right-8 bg-accent p-4 rounded-2xl shadow-2xl z-20 border border-white/20 hidden sm:block">
